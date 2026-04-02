@@ -1,0 +1,37 @@
+/* 
+ *  █░█ █ █▄░█ ▀█▀ ▄▀█ █▀▀ █▀▀ ░ █▀▀ █▀ █▀
+ *  ▀▄▀ █ █░▀█ ░█░ █▀█ █▄█ ██▄ ▄ █▄▄ ▄█ ▄█
+ * inspired by the photos in: https://youtu.be/AcS1pLlXB8g
+ *
+ * LICENSE: This source is release in the public domain.
+ * Use it for whateer you want to use it.
+ *
+ */
+
+figure.vintage {
+  --vintage-font-size: 1rem;
+  --vintage-border-color: black;
+
+  display: grid;
+  grid-template-areas: "title" "image" "description";
+
+  > figcaption > .vintage-title:is(h1,h2,h3,h4,h5,h6):first-child {
+    grid-area: "title";
+    font-style: italic;
+    font-size: var(--vintage-font-size);
+  }
+
+  > img.vintage-image {
+    grid-area: "image";
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--vintage-border-color);
+  }
+
+  > figcaption > *.vintage-description {
+    grid-area: "description";
+    text-align: right;
+    font-weight: bold;
+    font-size: var(--vintage-font-size);
+  }
+}
