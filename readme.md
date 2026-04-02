@@ -1,6 +1,7 @@
 # mini-styles
 
-> [!info]
+> [!NOTE]
+>
 > an assortment of small css-styles in the form of
 > components, etc.
 >
