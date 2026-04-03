@@ -9,29 +9,33 @@
 
 @media print {
   @page {
-    size: a4 landscape;
+    size: A4 landscape;
+    margin: 0mm;
+    padding: 0mm;
   }
+  
   .zine {
     display: grid;
     grid-template-areas:
-      "p5 p4 p3 p2"
-      "p6 p7 p8 p1";
+      "page5 page4 page3 page2"
+      "page6 page7 page8 page1";
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(2, 50%);
-    /* a very small margin so that the pages do look good */
     [class*="page-"] {
-      margin: 5mm;
+      /* weird padding so that the pages do look good. */
+      /* NOTE: When printing the website, set the margin to zero. */
+      padding: 8.5mm 2mm;
     }
 
     .page-2,.page-3,.page-4,.page-5{transform: rotate(180deg);}
   
-    .page-1 { grid-area: p1;}
-    .page-2 { grid-area: p2;}
-    .page-3 { grid-area: p3;}
-    .page-4 { grid-area: p4;}
-    .page-5 { grid-area: p5;}
-    .page-6 { grid-area: p6;}
-    .page-7 { grid-area: p7;}
-    .page-8 { grid-area: p8;}
+    .page-1 { grid-area: page1;}
+    .page-2 { grid-area: page2;}
+    .page-3 { grid-area: page3;}
+    .page-4 { grid-area: page4;}
+    .page-5 { grid-area: page5;}
+    .page-6 { grid-area: page6;}
+    .page-7 { grid-area: page7;}
+    .page-8 { grid-area: page8;}
   }
 }
