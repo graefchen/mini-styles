@@ -15,12 +15,6 @@ figure.vintage {
   display: grid;
   grid-template-areas: "title" "image" "description";
 
-  > figcaption > .vintage-title:is(h1,h2,h3,h4,h5,h6):first-child {
-    grid-area: "title";
-    font-style: italic;
-    font-size: var(--vintage-font-size);
-  }
-
   > img.vintage-image {
     grid-area: "image";
     border-width: 2px;
@@ -28,10 +22,18 @@ figure.vintage {
     border-color: var(--vintage-border-color);
   }
 
-  > figcaption > *.vintage-description {
-    grid-area: "description";
-    text-align: right;
-    font-weight: bold;
-    font-size: var(--vintage-font-size);
+  > figcaption {
+    > .vintage-title {
+      grid-area: "title";
+      font-style: italic;
+      font-size: var(--vintage-font-size);
+    }
+
+    > .vintage-description {
+      grid-area: "description";
+      text-align: right;
+      font-weight: bold;
+      font-size: var(--vintage-font-size);
+    }
   }
 }
